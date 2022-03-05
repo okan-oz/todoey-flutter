@@ -8,8 +8,17 @@ void main() => runApp(MyApp());
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-      builder: (context) => TaskData(),
+    // return ChangeNotifierProvider(
+    //   builder: (context) => TaskData(),
+    //   child: MaterialApp(
+    //     home: TasksScreen(),
+    //   ),
+    // );
+
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => TaskData()),
+      ],
       child: MaterialApp(
         home: TasksScreen(),
       ),
