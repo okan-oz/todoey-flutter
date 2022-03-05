@@ -30,6 +30,10 @@ class TaskTile extends StatelessWidget {
           style: TextStyle(decoration: isChecked ? TextDecoration.lineThrough : null),
         ),
         trailing: Checkbox(
+          side: BorderSide(color: Colors.blue, width: 1, ),
+          splashRadius: 50,
+          tristate: false,
+          shape: CircleBorder(),
           activeColor: Colors.lightBlueAccent,
           value: isChecked,
           onChanged: (bool? value) {
